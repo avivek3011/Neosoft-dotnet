@@ -43,5 +43,6 @@
 - `git checkout -b feature-pushpinder` - creates a new branch `feature-pushpinder` and switch it as a working branch.
 - git add -> commit -> git push
 - make a Pull Request for code review
+-'git vcs' -VCS are sometimes known as SCM (Source Code Management) tools or RCS (Revision Control System). One of the most popular VCS tools in use today is called Git.
 
 
