@@ -60,22 +60,13 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label lbl_Gender;
 
         /// <summary>
-        /// rb_Male control.
+        /// rbl_Gender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rb_Male;
-
-        /// <summary>
-        /// rb_Female control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rb_Female;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbl_Gender;
 
         /// <summary>
         /// lbl_CatType control.

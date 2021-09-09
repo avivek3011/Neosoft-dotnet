@@ -91,7 +91,7 @@ namespace Web
             string name = tb_Name.Text;
             string dob = tb_Dob.Text;
             int genderId;
-            if (rb_Male.Checked)
+            if (rbl_Gender.SelectedIndex==1)
             {
                 genderId = 1;
             }

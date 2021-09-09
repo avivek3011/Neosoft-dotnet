@@ -20,7 +20,7 @@ namespace Web
         protected void Customer_Registration(string conString) {
             string Name = TextBox1.Text;
             string Email = TextBox2.Text;
-            string Zipcode = TextBox3.Text;
+            string Zipcode = tb_zipcode.Text;
             string query = "CustomerRegistration";
             using (SqlConnection cons = new SqlConnection(conString))
             {
@@ -45,7 +45,7 @@ namespace Web
         protected void Customer_Login(string conString)
         {
             string Name = TextBox1.Text;
-            string Zipcode = TextBox3.Text;
+            string Zipcode = tb_zipcode.Text;
             string Email = TextBox2.Text;
             string UserName = TextBox4.Text;
             string Password = TextBox5.Text;

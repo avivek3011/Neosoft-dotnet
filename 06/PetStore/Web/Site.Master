@@ -13,7 +13,11 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <style>
+        .mandatory{
+            color:red
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -53,6 +57,7 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/Cat">Cat</a></li>
+                        <li><a runat="server" href="~/Customer">Customer Registeration</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,5 +72,7 @@
         </div>
 
     </form>
+    <script src="Scripts/Validation.js"></script>
+    <script src="Scripts/Common.js"></script>
 </body>
 </html>
