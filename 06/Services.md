@@ -48,3 +48,14 @@
     - Easy setup and extend for REST over SOAP service.
     - Statelessness of RESTful service is helpful in scalability.
     - Reachability of clients because of HTTP as we have more devices supporting HTTP.
+
+
+## Reference
+- [Http](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+- [Overview of Http](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+- [Evolution of Http](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [Resources on Web](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [MIME Types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+- [Content Negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation)
+- [Http Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [Http Status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)

@@ -10,11 +10,16 @@ namespace Web
     {        
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+           
             if (!this.IsPostBack)
             {
                 string Constring = ConfigurationManager.ConnectionStrings["PetDbConnectionString"].ConnectionString;
-                Load_dd_CatType(Constring);
-                Load_dd_FurType(Constring);
+                //Load_dd_CatType(Constring);
+                //Load_dd_FurType(Constring);
             }
         }
 

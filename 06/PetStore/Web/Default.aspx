@@ -3,8 +3,9 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Pet store App</h1>
-        
+        <h1><asp:Label ID="lbl_txt" runat="server" Text=""></asp:Label></h1>
+        <h2> Welcome to Pet store App</h2>
+        <asp:Button ID ="btnLogout" runat="server" Text ="LogOut" OnClick="btnLogout_Click" />
     </div>
 
     <div class="row">
@@ -13,6 +14,9 @@
             <p>
                All about cats
             </p>           
+        </div>
+        <div>
+            
         </div>
     </div>
 
