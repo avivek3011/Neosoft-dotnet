@@ -20,3 +20,17 @@
     3. It uses a Front Controller pattern that processes Web application requests through a single controller. This enables you to design an application that supports a rich routing infrastructure. For more information, see Front Controller on the MSDN Web site.
     4. It provides better support for test-driven development (TDD).
     5. It works well for Web applications that are supported by large teams of developers and Web designers who need a high degree of control over the application behavior.
+
+## Views
+- Consists of UI logic
+- Types of Views:
+  - Static View : Plain HTML 
+  - Weakly-Typed Views : Which uses View Bag and View Data
+  - Strongly-Type Views : Which is binded to a model
+  - Dynamic Typed Views : which are not binded to a model but the model is passed to view via controller and View automatically identify the model type as dynamic
+
+
+## [Entity Framework 6](https://docs.microsoft.com/en-us/ef/ef6/)
+- [LINQ](https://www.tutorialsteacher.com/linq/linq-tutorials)
+- ### References
+  - [EF Basics](https://www.entityframeworktutorial.net/what-is-entityframework.aspx)

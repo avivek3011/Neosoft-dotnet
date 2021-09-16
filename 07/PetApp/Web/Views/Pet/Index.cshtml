@@ -1,0 +1,27 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Pets";
+}
+
+<h2>All Pets</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cats in Model)
+        {
+        <tr>
+            <th scope="row">@cats.Id</th>
+            <td>@cats.Name</td>
+            <td>@cats.Gender</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
