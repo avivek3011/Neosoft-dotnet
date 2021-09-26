@@ -23,6 +23,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Pet", "Index", "Pet")</li>
                 </ul>
             </div>
         </div>
@@ -32,6 +33,7 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Pet Application</p>
+            @Html.Partial("_TimePartial")
         </footer>
     </div>
 

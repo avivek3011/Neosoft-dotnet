@@ -13,6 +13,8 @@ namespace Web.Models
         public string  Name { get; set; }
         public string Gender { get; set; }
         [DisplayName("Birthday")]
+        [DataType(DataType.Date, ErrorMessage = "Date only")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? Dob { get; set; }
         [DisplayName("Leg length (cms)")]
         public decimal? legLength { get; set; }

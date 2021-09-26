@@ -9,9 +9,9 @@ namespace Web.Controllers
     public class HomeController : Controller
     {
         //GET
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello";
+            return View();
         }
         //GET
         public string Welcome(string name, int id=1)
@@ -25,7 +25,7 @@ namespace Web.Controllers
         //GET
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewData["message"] = "Your application description page.";
 
             return View();
         }

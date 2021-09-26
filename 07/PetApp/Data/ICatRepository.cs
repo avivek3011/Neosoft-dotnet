@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    interface ICatRepository
+    public interface ICatRepository
     {
         IEnumerable<Cat> GetCats();
-        Cat GetCatById(int id);
+        Cat GetCatById(int? id);
         void AddCat(Cat cat);
-        void UpdateCat(int id);
+        Cat UpdateCat(Cat cats);
         void DeleteCat(int id);
         void Save();
     }

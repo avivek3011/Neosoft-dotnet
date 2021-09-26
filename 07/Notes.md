@@ -23,13 +23,40 @@
 
 ## Views
 - Consists of UI logic
+- Extension .cshtml, processed by [Razor Engine](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
 - Types of Views:
-  - Static View : Plain HTML 
-  - Weakly-Typed Views : Which uses View Bag and View Data
-  - Strongly-Type Views : Which is binded to a model
-  - Dynamic Typed Views : which are not binded to a model but the model is passed to view via controller and View automatically identify the model type as dynamic
+  - Based on data binding 
+    - Static View : Plain HTML 
+    - Weakly-Typed Views : Which uses View Bag and View Data
+    - Strongly-Type Views : Which is binded to a model
+    - Dynamic Typed Views : which are not binded to a model but the model is passed to view via controller and View automatically identify the model type as dynamic
+  - Few other types of views
+    - Layout View: Replacement of Master pages in the Asp.Net WebForms, to adhere to DRY principle of coding
+    - [Partial Views](https://www.completecsharptutorial.com/asp-net-mvc5/adding-partial-views-pages-in-mvc-5-with-example.php): Like User Control in Asp.Net WebForms, to adhere to Reusability principle of coding
 
-
+## Passing Data in MVC
+- Action to View/ Controller to View -> ViewBag, ViewData
+- Controller to Controller - TempData, it is normally used for 1 read only. If you want to preserve it for 2nd read then use the method TempData.Keep().
+- Session can be for entire request session.
+- Model
+## Miscellaneous Topics
+- [Model Binding](https://www.codeproject.com/Articles/605595/ASP-NET-MVC-Custom-Model-Binder)
+  - Whenever an action method demnds for a parameter, model binder comes into the picture. Model Binder binds the value of an actions method's parameter
+  - ModelBinder maps http requests from view data to the model. The MVC runtime uses Default ModelBinder to build the model parameters. This is done automatically by MVC Model Binder.
+  - Model binder looks for these values:
+    - Route (Url)
+    - QueryString
+    - FormsCollection
+    - File
+  
+- [Filters](https://www.c-sharpcorner.com/article/filters-in-Asp-Net-mvc-5-0-part-twelve/)
+  - Filters are used to inject extra logic at the different levels of MVC Framework request processing. Filters provide a way for cross-cutting concerns (logging, authorization, and caching).
+  - There are five types of Filters in ASP.NET MVC 5:
+    - Authentication:	These are Runs, before any other filters or the action method. It checks if user is identified and valid.
+    - Authorization: These Runs first, before any other filters or the action method. Checks user's role if it is allowed to access a resource. 
+    - Action:	These Runs before and after the action method.
+    - Result:	Runs before and after the action result are executed.
+    - Exception:	Runs only if another filter, the action method, or the action resultthrows an exception.
 ## [Entity Framework 6](https://docs.microsoft.com/en-us/ef/ef6/)
 - [LINQ](https://www.tutorialsteacher.com/linq/linq-tutorials)
 - ### References
