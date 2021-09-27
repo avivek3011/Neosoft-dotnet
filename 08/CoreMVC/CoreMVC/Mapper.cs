@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,6 +36,19 @@ namespace CoreMVC
                 Name = superPower.Name,
                 Description = superPower.Description,
                 SuperHeroId = superPower.Owner.Id
+            };
+        }
+        public static Data.Entities.SuperPower Map(Models.SuperPower superPower,int id)
+        {
+            if (superPower == null)
+            {
+                return null;
+            }
+            return new Data.Entities.SuperPower()
+            {
+                Name = superPower.Name,
+                Description = superPower.Description,
+                OwnerId = id
             };
         }
         public static IEnumerable<Models.SuperHero> Map(IEnumerable<Data.Entities.SuperHero> superHeroes) => superHeroes.Select(Map);

@@ -54,15 +54,20 @@ namespace CoreMVC
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
+            app.UseRouting();// we use this middle ware to enable custom routing
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                /*endpoints.MapControllerRoute(
+                    name: "Superheroes",
+                    pattern: "{controller=SuperHero}/{action=Index}/{id?}"
+                    );
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");*/
+                endpoints.MapControllers();
             });
         }
     }

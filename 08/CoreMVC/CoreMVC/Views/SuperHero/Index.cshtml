@@ -56,14 +56,15 @@
 					    <li>@sp.Name</li>
 					}
 			</ul>
-			<a asp-action="Add" asp-controller="SuperPower" asp-route-id=@item.id>Add more super power</a>
+			<a asp-action="AddSuperPower" asp-controller="SuperPower" asp-route-id=@item.id>Add more super power</a>
 			}
 			@if(item.superPowers.Count == 0){
-				<a asp-action="Add" asp-controller="SuperPower" asp-route-id=@item.id>Add super power</a>
+				<a asp-action="AddSuperPower" asp-controller="SuperPower" asp-route-id=@item.id>Add super power</a>
 				}
 		</td>
 	   <td>
-					@Html.ActionLink("Edit", "Edit", new {  id=item.id }) |
+					@*@Html.ActionLink("Edit", "Update", new {  id=item.id }) *@
+					<a asp-action="Update" asp-route-id=@item.id>Edit</a>|
 					@Html.ActionLink("Details", "Details", new {  id=item.id  }) |
 					@Html.ActionLink("Delete", "Delete", new {  id=item.id })
 	   </td>

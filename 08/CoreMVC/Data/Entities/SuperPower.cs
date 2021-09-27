@@ -17,6 +17,7 @@ namespace Data.Entities
         public string Name { get; set; }
         [StringLength(200)]
         public string Description { get; set; }
+        public int OwnerId { get; set; }
         public SuperHero Owner { get; set; }
     }
 }

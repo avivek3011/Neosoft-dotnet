@@ -97,7 +97,6 @@ namespace Data.Migrations
 
                     b.Property<int?>("OwnerId")
                         .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("OwnerId");
@@ -109,8 +108,8 @@ namespace Data.Migrations
                 {
                     b.HasOne("Data.Entities.SuperHero", "Owner")
                         .WithMany("SuperPowers")
-                        .HasForeignKey("OwnerId");
-
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade);
                     b.Navigation("Owner");
                 });
 

@@ -46,3 +46,7 @@ Other things you'll need with DBFirst:
 - [Architecture Principles](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles)
 - [Comman web app architectures](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
 - [Asp.net core MVC with EFCore](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-5.0&tabs=visual-studio)
+- [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/working-with-forms?view=aspnetcore-5.0#the-form-tag-helper)
+- [Custom Validation](http://www.binaryintellect.net/articles/d80b2b90-847b-4c5b-90ac-c2db18e131be.aspx)
+- [Custom validation using IValidatableObject](https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/custom-validation-with-ivalidatableobject-in-mvc/)
+- [Routing in asp.net core mvc](https://code-maze.com/routing-asp-net-core-mvc/)

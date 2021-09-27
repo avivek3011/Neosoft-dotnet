@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace CoreMVC.Controllers
 {
+    //[Route("[controller]")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -17,7 +18,9 @@ namespace CoreMVC.Controllers
         {
             _logger = logger;
         }
-
+        [Route("")]
+        [Route("Index")]       
+        [Route("Home/Index")]       
         public IActionResult Index()
         {
             return View();
