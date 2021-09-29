@@ -50,3 +50,4 @@ Other things you'll need with DBFirst:
 - [Custom Validation](http://www.binaryintellect.net/articles/d80b2b90-847b-4c5b-90ac-c2db18e131be.aspx)
 - [Custom validation using IValidatableObject](https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/custom-validation-with-ivalidatableobject-in-mvc/)
 - [Routing in asp.net core mvc](https://code-maze.com/routing-asp-net-core-mvc/)
+- [Cloud Models](https://www.stackscale.com/blog/cloud-service-models/)

@@ -56,9 +56,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -130,16 +127,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccessController.cs" />
+    <Compile Include="CustomFilter\CustomAuthorizeAttribute.cs" />
+    <Compile Include="CustomFilter\CustomMembership.cs" />
+    <Compile Include="CustomFilter\CustomMembershipUser.cs" />
+    <Compile Include="CustomFilter\CustomPrincipal.cs" />
+    <Compile Include="CustomFilter\CustomRole.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Pet1Controller.cs" />
     <Compile Include="Controllers\PetController.cs" />
+    <Compile Include="DbAccess\Authentication.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cat.cs" />
-    <Compile Include="Models\CatApiModel.cs" />
     <Compile Include="Models\CatViewModel.cs" />
+    <Compile Include="Models\LoginView.cs" />
     <Compile Include="Models\Mapper.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,18 +178,17 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Registration.cshtml" />
+    <Content Include="Views\Home\Activation.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Hello.cshtml" />
     <Content Include="Views\Pet\Index.cshtml" />
     <Content Include="Views\Pet\GetCatById.cshtml" />
     <Content Include="Views\Pet\Create.cshtml" />
     <Content Include="Views\Pet\Edit.cshtml" />
     <Content Include="Views\Shared\_TimePartial.cshtml" />
-    <Content Include="Views\Pet1\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Access\AccessDenied.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

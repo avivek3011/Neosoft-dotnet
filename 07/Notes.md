@@ -57,7 +57,17 @@
     - Action:	These Runs before and after the action method.
     - Result:	Runs before and after the action result are executed.
     - Exception:	Runs only if another filter, the action method, or the action resultthrows an exception.
+
+## Security in Asp.Net
+- Refer to roles and membership slides for concept
+- create tables -> Users, Roles, UserRoles (mapping table)
+- create entities and DbContext class 
+- Create a `MembershipClass:MembershipProvider` and implement all abstract methods, properties.
+- Implement `CustomMembershipUser:MemberShipUser` and implement its abstract methods.
+- Same way implement CustomPrincipal and CustomRole classes as well (refer to code).
+- Add Appliction_PostAuthenticationRequest event in Global.asax files
 ## [Entity Framework 6](https://docs.microsoft.com/en-us/ef/ef6/)
 - [LINQ](https://www.tutorialsteacher.com/linq/linq-tutorials)
 - ### References
   - [EF Basics](https://www.entityframeworktutorial.net/what-is-entityframework.aspx)
+ 

@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Web.Models;
+﻿using Data;
 using Data.Entities;
-using Data;
+using System.Collections.Generic;
 using System.Net;
-using Cat = Data.Entities.Cat;
+using System.Web.Mvc;
+using Web.CustomFilter;
+using Web.Models;
 
 namespace Web.Controllers
 {
+    [CustomAuthorize(Roles = "User")]
     [HandleError]
     public class PetController : Controller
     {

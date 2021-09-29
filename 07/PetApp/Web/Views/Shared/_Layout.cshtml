@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using Web.CustomFilter
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>@ViewBag.Title - Pet Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,29 +18,40 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Pet Application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Pet Application", "Index", "Pet", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Pet", "Index", "Pet")</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <div id="header_container">
+        <div id="header">
+            <i>@ViewBag.Title</i>
+            <span style="float:right; font-size:small">
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    var identity = ((CustomPrincipal)HttpContext.Current.User);
+            @Html.Label(string.Format("Welcome {0} {1}", identity.FirstName, identity.LastName))
+                            @Html.ActionLink("SignUp", "Registration", "Home")
+                                            @Html.ActionLink("Log out", "LogOut", "Home")}
+            </span>
+          
+        </div>
+    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Pet Application</p>
-            @Html.Partial("_TimePartial")
+            <p>&copy; @DateTime.Now.Year - NEOSOFT Application</p>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("Scripts", false)
 </body>
 </html>
